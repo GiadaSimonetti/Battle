@@ -15,4 +15,5 @@ describe "submitting player names", :type => :feature do
    click_button "Submit"
    expect(page).to have_content("Player 1: Giada Player 2: Tom")
   end
+
 end
