@@ -17,12 +17,8 @@ class Battle < Sinatra::Base
   get '/play' do
     @player_1 = session[:player_1]
   	@player_2 = session[:player_2]
-    erb :play
-  end
-
-  get '/health' do
     @health2 = 80
-    erb :health
+    erb :play
   end
 
   run! if app_file == $0
