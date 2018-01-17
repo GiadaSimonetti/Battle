@@ -1,8 +1,8 @@
 <body>
-  <h1> Welcome to the battle  <%= @player_1 %> and <%= @player_2 %>! </h1>
- <p> Player 1: <%= @player_1 %></p>
- <p> Player 2: <%= @player_2 %></p>
- <p> <%= @player_2 %>'s health is <%= @health2 %></p>
+  <h1> Welcome to the battle  <%= @player_1.name %> and <%= @player_2.name %>! </h1>
+ <p> Player 1: <%= @player_1.name %></p>
+ <p> Player 2: <%= @player_2.name %></p>
+ <p> <%= @player_2.name %>'s health is <%= @health2 %></p>
  <form method = "GET" action = "/attack">
  <input type =  "submit" value = "Hit Player 2">
  </form>
