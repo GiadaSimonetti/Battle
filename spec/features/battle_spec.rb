@@ -15,7 +15,7 @@ end
 feature "checking player hp" do
   scenario "show us play 2's HP" do
     sign_in_and_play
-    expect(page).to have_content("Tom's HP is 80")
+    expect(page).to have_content("Tom's HP is 100")
   end
 end
 
@@ -31,6 +31,6 @@ feature "Player_1 to start winning a game" do
   scenario "Reduce Player_2's HP" do
     sign_in_and_play
     click_button "Hit Player 2"
-    expect(page).to have_content("Tom's HP is 70")
+    expect(page).to have_content("Tom's HP is 90")
   end
 end
