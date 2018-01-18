@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require_relative './lib/player'
+require 'pry'
 
 class Battle < Sinatra::Base
 
@@ -24,10 +25,12 @@ class Battle < Sinatra::Base
   end
 
   get '/attack' do
+    binding.pry
     @player_1 = session['player_1']
   	@player_2 = session['player_2']
     @hit_points = session['hit_points']
-    @player_1.attack(@player_2)
+    Game.new.attack(@player_2)
+    binding.pry
     erb(:attack)
   end
 
